@@ -1,0 +1,28 @@
+{
+	"name": "cosman/bigcommerce",
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Agbitor Cosman",
+			"email": "cosman2008@rocketmail.com"
+		}
+	],
+	"require": {
+		"guzzlehttp/guzzle": "^6.3",
+		"illuminate/support": "^5.5"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^6.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Maverickslab\\BigCommerce\\": "src"
+		}
+	},
+	"autoload-dev": {
+	    "psr-4": {
+	        "Maverickslab\\BigCommerce\\Test\\": "tests"
+	    }
+	}
+}

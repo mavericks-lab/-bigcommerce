@@ -1,0 +1,27 @@
+{
+	"data": {
+		"id": 1,
+		"parent_id": 0,
+		"name": "iPhones   279727428",
+		"description": "",
+		"views": 0,
+		"sort_order": 1,
+		"page_title": "",
+		"meta_keywords": [
+			""
+		],
+		"meta_description": "",
+		"layout_file": "category.html",
+		"image_url": "",
+		"is_visible": true,
+		"search_keywords": "",
+		"default_product_sort": "use_store_settings",
+		"custom_url": {
+			"url": "/product-category-1/",
+			"is_customized": false
+		}
+	},
+	"meta": {
+		
+	}
+}

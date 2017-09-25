@@ -1,0 +1,15 @@
+{
+	"data": {
+		"id": 3,
+		"email": "ama.osei@gmail.com",
+		"first_name": "Ama",
+		"last_name": "Osei",
+		"source": "",
+		"order_id": null,
+		"date_created": "2017-09-15T16:31:27+00:00",
+		"date_modified": "2017-09-15T16:31:27+00:00"
+	},
+	"meta": {
+		
+	}
+}

@@ -1,0 +1,104 @@
+{
+	"data": [
+		{
+			"id": 18,
+			"parent_id": 0,
+			"name": "iPhones   279727428",
+			"description": "",
+			"views": 0,
+			"sort_order": 1,
+			"page_title": "",
+			"meta_keywords": [
+				""
+			],
+			"meta_description": "",
+			"layout_file": "category.html",
+			"image_url": "",
+			"is_visible": true,
+			"search_keywords": "",
+			"default_product_sort": "use_store_settings",
+			"custom_url": {
+				"url": "/product-category-1/",
+				"is_customized": false
+			}
+		},
+		{
+			"id": 19,
+			"parent_id": 0,
+			"name": "Product Category 2  271242241",
+			"description": "",
+			"views": 0,
+			"sort_order": 2,
+			"page_title": "",
+			"meta_keywords": [
+				""
+			],
+			"meta_description": "",
+			"layout_file": "category.html",
+			"image_url": "",
+			"is_visible": true,
+			"search_keywords": "",
+			"default_product_sort": "use_store_settings",
+			"custom_url": {
+				"url": "/product-category-2/",
+				"is_customized": false
+			}
+		},
+		{
+			"id": 20,
+			"parent_id": 0,
+			"name": "Product Category 3   1261932352",
+			"description": "",
+			"views": 0,
+			"sort_order": 4,
+			"page_title": "",
+			"meta_keywords": [
+				""
+			],
+			"meta_description": "",
+			"layout_file": "category.html",
+			"image_url": "",
+			"is_visible": true,
+			"search_keywords": "",
+			"default_product_sort": "use_store_settings",
+			"custom_url": {
+				"url": "/product-category-3/",
+				"is_customized": false
+			}
+		},
+		{
+			"id": 297,
+			"parent_id": 0,
+			"name": "Books",
+			"description": "",
+			"views": 0,
+			"sort_order": 0,
+			"page_title": "",
+			"meta_keywords": [
+				""
+			],
+			"meta_description": "",
+			"layout_file": "",
+			"image_url": "",
+			"is_visible": true,
+			"search_keywords": "",
+			"default_product_sort": "use_store_settings",
+			"custom_url": {
+				"url": "/books/",
+				"is_customized": false
+			}
+		}
+	],
+	"meta": {
+		"pagination": {
+			"total": 4,
+			"count": 4,
+			"per_page": 50,
+			"current_page": 1,
+			"total_pages": 1,
+			"links": {
+				"current": "?page=1&limit=50"
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"data": [
+		{
+			"id": 1,
+			"email": "kofi.nkansh@gmail.com",
+			"first_name": "Kofi",
+			"last_name": "Nkansah",
+			"source": "",
+			"order_id": null,
+			"date_created": "2017-09-15T16:29:47+00:00",
+			"date_modified": "2017-09-15T16:29:47+00:00"
+		},
+		{
+			"id": 2,
+			"email": "kofi.acquah@gmail.com",
+			"first_name": "Kofi",
+			"last_name": "Acquah",
+			"source": "",
+			"order_id": null,
+			"date_created": "2017-09-15T16:31:06+00:00",
+			"date_modified": "2017-09-15T16:31:06+00:00"
+		},
+		{
+			"id": 3,
+			"email": "ama.osei@gmail.com",
+			"first_name": "Ama",
+			"last_name": "Osei",
+			"source": "",
+			"order_id": null,
+			"date_created": "2017-09-15T16:31:27+00:00",
+			"date_modified": "2017-09-15T16:31:27+00:00"
+		}
+	],
+	"meta": {
+		"pagination": {
+			"total": 3,
+			"count": 3,
+			"per_page": 50,
+			"current_page": 1,
+			"total_pages": 1,
+			"links": {
+				"current": "?page=1&limit=50"
+			}
+		}
+	}
+}
