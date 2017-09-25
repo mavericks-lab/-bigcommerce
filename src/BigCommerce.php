@@ -18,6 +18,11 @@ use Maverickslab\BigCommerce\Http\Client\BigCommerceHttpClient;
 class BigCommerce
 {
 
+    /**
+     * Version
+     * 
+     * @var string
+     */
     const API_VERSION = 'v3';
 
     /**
