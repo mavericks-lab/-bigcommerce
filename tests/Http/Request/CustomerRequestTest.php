@@ -19,7 +19,7 @@ class CustomerRequestTest extends BaseRequestTest
      * {@inheritdoc}
      * @see \Maverickslab\BigCommerce\Test\Http\Request\BaseRequestTest::setUp()
      */
-    public function setUp()
+    public function setUp() 
     {
         parent::setUp();
         
@@ -42,7 +42,7 @@ class CustomerRequestTest extends BaseRequestTest
     {
         $this->mockHandler->append(new Response(200, $this->responseHeaders, $this->readResponseFile('customer/list.json')));
         
-        $response = $this->request->fetchSubscribers()->wait();
+        $response = $this->request->fetch()->wait();
         
         $this->assertResponseOk($response);
         
@@ -57,7 +57,7 @@ class CustomerRequestTest extends BaseRequestTest
         
         $customerId = 3;
         
-        $response = $this->request->fetchSubscriberById($customerId)->wait();
+        $response = $this->request->fetchById($customerId)->wait();
         
         $this->assertResponseOk($response);
         
@@ -80,7 +80,7 @@ class CustomerRequestTest extends BaseRequestTest
             'email' => 'kofi.nkansah@gmail.com'
         );
         
-        $response = $this->request->createSubscriber($customerInfo)->wait();
+        $response = $this->request->create($customerInfo)->wait();
         
         $this->assertResponseOk($response);
         
@@ -109,7 +109,7 @@ class CustomerRequestTest extends BaseRequestTest
             'email' => 'kofi.nkansh-menu@gmail.com'
         );
         
-        $response = $this->request->updateSubscriber($customerId, $customerInfo)->wait();
+        $response = $this->request->update($customerId, $customerInfo)->wait();
         
         $this->assertResponseOk($response);
         
