@@ -33,6 +33,9 @@ class OrderRequest extends BaseRequest
      */
     public function fetch(int $page = 1, int $limit = 50, array $filters = []): PromiseInterface
     {
+        $filters['page'] = $page;
+        $filters['limit'] = $limit;
+        
         return $this->httpClient->useLegacyConnection()->getAsync('orders', array(
             'query' => $filters
         ));

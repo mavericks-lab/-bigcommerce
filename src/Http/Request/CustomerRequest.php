@@ -20,7 +20,7 @@ class CustomerRequest extends BaseRequest
      * @param int $limit
      * @param array $filters
      *            Additional filters
-     * @return PromiseInterface 
+     * @return PromiseInterface
      */
     public function fetch(int $page = 1, int $limit = 50, array $filters = []): PromiseInterface
     {
@@ -99,5 +99,16 @@ class CustomerRequest extends BaseRequest
         return $this->httpClient->useLegacyConnection()->putAsync(sprintf('customers/%d', $customerId), array(
             'json' => $customerInfo
         ));
+    }
+
+    /**
+     * Generates request to fetch addresses belonging to a given customer
+     *
+     * @param int $customerId
+     * @return PromiseInterface
+     */
+    public function fetchAddresses(int $customerId): PromiseInterface
+    {
+        return $this->httpClient->useLegacyConnection()->getAsync(sprintf('customers/%d/addresses', $customerId));
     }
 }
