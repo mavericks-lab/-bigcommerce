@@ -67,7 +67,7 @@ class OrderRequest extends BaseRequest
     }
 
     /**
-     * Generates request to fetch a number of products in a given order
+     * Generates request to fetch a number of products for a given order
      *
      * @param int $orderId
      * @param int $page
@@ -77,6 +77,42 @@ class OrderRequest extends BaseRequest
     public function fetchOrderedProducts(int $orderId, int $page = 1, int $limit = 50): PromiseInterface
     {
         return $this->httpClient->useLegacyConnection()->getAsync(sprintf('orders/%d/products', $orderId), array(
+            'query' => array(
+                'page' => $page,
+                'limit' => $limit
+            )
+        ));
+    }
+    
+    /**
+     * Generates request to fetch a number of shipping addresses for a given order
+     *
+     * @param int $orderId
+     * @param int $page
+     * @param int $limit
+     * @return PromiseInterface
+     */
+    public function fetchShippingAddresses(int $orderId, int $page = 1, int $limit = 50): PromiseInterface
+    {
+        return $this->httpClient->useLegacyConnection()->getAsync(sprintf('orders/%d/shippingaddresses', $orderId), array(
+            'query' => array(
+                'page' => $page,
+                'limit' => $limit
+            )
+        ));
+    }
+    
+    /**
+     * Generates request to fetch a number of coupons for a given order
+     *
+     * @param int $orderId
+     * @param int $page
+     * @param int $limit
+     * @return PromiseInterface
+     */
+    public function fetchCoupons(int $orderId, int $page = 1, int $limit = 50): PromiseInterface
+    {
+        return $this->httpClient->useLegacyConnection()->getAsync(sprintf('orders/%d/coupons', $orderId), array(
             'query' => array(
                 'page' => $page,
                 'limit' => $limit
