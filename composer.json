@@ -24,5 +24,6 @@
 	    "psr-4": {
 	        "Maverickslab\\BigCommerce\\Test\\": "tests"
 	    }
-	}
+	},
+	"minimum-stability": "dev"
 }
