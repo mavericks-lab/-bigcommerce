@@ -111,4 +111,75 @@ class CustomerRequest extends BaseRequest
     {
         return $this->httpClient->useLegacyConnection()->getAsync(sprintf('customers/%d/addresses', $customerId));
     }
+
+    /**
+     * Creates a single a ddress for a customer
+     *
+     * @param int $customerId
+     * @param array $address
+     * @return PromiseInterface
+     */
+    public function createAddress(int $customerId, array $address): PromiseInterface
+    {
+        return $this->httpClient->useLegacyConnection()->postAsync(sprintf('customers/%d/addresses', $customerId), array(
+            'json' => $address
+        ));
+    }
+
+    /**
+     * Creates at least one address for a customer
+     *
+     * @param int $customerId
+     * @param array ...$addresses
+     * @return PromiseInterface
+     */
+    public function createAddresses(int $customerId, array ...$addresses): PromiseInterface
+    {
+        $promises = array_map(function ($address) use ($customerId) {
+            return $this->createAddress($customerId, $address);
+        }, $addresses);
+        
+        return $this->resolvePromises($promises);
+    }
+
+    /**
+     * Generates request to update a single a ddress for a customer
+     *
+     * @param int $customerId
+     * @param int $addressId
+     * @param array $address
+     * @return PromiseInterface
+     */
+    public function updateAddress(int $customerId, int $addressId, array $address): PromiseInterface
+    {
+        return $this->httpClient->useLegacyConnection()->putAsync(sprintf('customers/%d/addresses/%d', $customerId, $addressId), array(
+            'json' => $address
+        ));
+    }
+
+    /**
+     * Generates request to delete a single a ddress for a customer
+     *
+     * @param int $customerId
+     * @param int $addressId
+     * @return PromiseInterface
+     */
+    public function deleteAddress(int $customerId, int $addressId): PromiseInterface
+    {
+        return $this->httpClient->useLegacyConnection()->deleteAsync(sprintf('customers/%d/addresses/%d', $customerId, $addressId));
+    }
+
+    /**
+     * Generates request to delete multiple addreses for a customer
+     *
+     * @param int $customerId
+     * @param array $filters
+     * @return PromiseInterface
+     */
+    public function deleteAddresses(int $customerId, array $filters = []): PromiseInterface
+    {
+        return $this->httpClient->useLegacyConnection()->deleteAsync(sprintf('customers/%d/addresses', $customerId), array(
+            'query' => $filters
+        ));
+    }
 }
