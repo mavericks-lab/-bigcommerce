@@ -1,7 +1,7 @@
 ## BIGCOMMERCE REQUESTS PACKAGE
 
 ### Description
-This package serves as a request mapper for BigCommerce products, orders, customer, and merchant end points.
+This package serves as a request mapper for BigCommerce products, orders, customers, and merchant end points.
 
 ### Installation
 ```
