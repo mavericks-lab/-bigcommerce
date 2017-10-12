@@ -472,4 +472,71 @@ class ProductRequest extends BaseRequest
             'json' => $variant
         ));
     }
+
+    /**
+     * Generates request to fetch brands
+     *
+     * @param int $page
+     * @param int $limit
+     * @return PromiseInterface
+     */
+    public function fetchBrands(int $page = 1, int $limit = 50): PromiseInterface
+    {
+        return $this->httpClient->useLegacyConnection()->getAsync('brands');
+    }
+
+    /**
+     * Generates request to fetch a single brand by id
+     *
+     * @param int $id
+     * @return PromiseInterface
+     */
+    public function fetchBrandById(int $id): PromiseInterface
+    {
+        $url = sprintf('brands/%d', $id);
+        
+        return $this->httpClient->useLegacyConnection()->getAsync($url);
+    }
+
+    /**
+     * Generates request to create a new brand
+     *
+     * @param array $brand
+     * @return PromiseInterface
+     */
+    public function createBrand(array $brand): PromiseInterface
+    {
+        return $this->httpClient->useLegacyConnection()->postAsync('brands', array(
+            'json' => $brand
+        ));
+    }
+
+    /**
+     * Generates request to update an existing brand
+     *
+     * @param int $Id
+     * @param array $brand
+     * @return PromiseInterface
+     */
+    public function updateBrand(int $id, array $brand): PromiseInterface
+    {
+        $url = sprintf('brands/%d', $id);
+        
+        return $this->httpClient->useLegacyConnection()->putAsync($url, array(
+            'json' => $brand
+        ));
+    }
+
+    /**
+     * Generates request to delete a single brand by id
+     *
+     * @param int $id
+     * @return PromiseInterface
+     */
+    public function deleteBrandById(int $id): PromiseInterface
+    {
+        $url = sprintf('brands/%d', $id);
+        
+        return $this->httpClient->useLegacyConnection()->deleteAsync($url);
+    }
 }
