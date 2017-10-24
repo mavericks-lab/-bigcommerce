@@ -24,15 +24,11 @@ class CustomerRequest extends BaseRequest
      */
     public function fetch(int $page = 1, int $limit = 50, array $filters = []): PromiseInterface
     {
-        $queries = $filters;
-        
-        $filters = array_merge_recursive($queries, array(
-            'page' => $page,
-            'limit' => $limit
-        ));
+        $filters['page'] = $page;
+        $filters['limit'] = $limit;
         
         return $this->httpClient->useLegacyConnection()->getAsync('customers', array(
-            'query' => $queries
+            'query' => $filters
         ));
     }
 
