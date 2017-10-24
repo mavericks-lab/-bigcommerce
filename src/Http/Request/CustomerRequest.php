@@ -26,7 +26,7 @@ class CustomerRequest extends BaseRequest
     {
         $queries = $filters;
         
-        $filters = array_merge($queries, array(
+        $filters = array_merge_recursive($queries, array(
             'page' => $page,
             'limit' => $limit
         ));
