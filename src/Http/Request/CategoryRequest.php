@@ -14,6 +14,16 @@ class CategoryRequest extends BaseRequest
 {
 
     /**
+     * Generates request to count number of categories
+     *
+     * @return PromiseInterface
+     */
+    public function count(): PromiseInterface
+    {
+        return $this->httpClient->useLegacyConnection()->getAsync('categories/count');
+    }
+
+    /**
      * Generates a request to create a new category
      *
      * @param array $category

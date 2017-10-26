@@ -14,6 +14,16 @@ class ProductRequest extends BaseRequest
 {
 
     /**
+     * Generates request to count number of products
+     * 
+     * @return PromiseInterface
+     */
+    public function count(): PromiseInterface
+    {
+        return $this->httpClient->useLegacyConnection()->getAsync('products/count');
+    }
+
+    /**
      * Generates request to create a new product
      *
      * @param array $product

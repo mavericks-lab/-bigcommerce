@@ -14,6 +14,16 @@ class CustomerRequest extends BaseRequest
 {
 
     /**
+     * Generates request to count number of customers
+     *
+     * @return PromiseInterface
+     */
+    public function count(): PromiseInterface
+    {
+        return $this->httpClient->useLegacyConnection()->getAsync('customers/count');
+    }
+
+    /**
      * Generates request to fetch a number of customers
      *
      * @param int $page
