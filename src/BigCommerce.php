@@ -8,6 +8,7 @@ use Maverickslab\BigCommerce\Http\Request\OrderRequest;
 use Maverickslab\BigCommerce\Http\Request\CustomerRequest;
 use Maverickslab\BigCommerce\Http\Request\MerchantRequest;
 use Maverickslab\BigCommerce\Http\Client\BigCommerceHttpClient;
+use Maverickslab\BigCommerce\Http\Request\OptionRequest;
 
 /**
  * BigCommerce API class
@@ -20,7 +21,7 @@ class BigCommerce
 
     /**
      * Version
-     * 
+     *
      * @var string
      */
     const API_VERSION = 'v3';
@@ -36,6 +37,12 @@ class BigCommerce
      * @var ProductRequest
      */
     protected $productRequest;
+
+    /**
+     *
+     * @var OptionRequest
+     */
+    protected $optionRequest;
 
     /**
      *
@@ -66,12 +73,13 @@ class BigCommerce
         $this->orderRequest = new OrderRequest($httpClient);
         $this->customerRequest = new CustomerRequest($httpClient);
         $this->merchantRequest = new MerchantRequest($httpClient);
+        $this->optionRequest = new OptionRequest($httpClient);
     }
 
     /**
      * Returns category managing resquest
      *
-     * @return CategoryRequest
+     * @return \Maverickslab\BigCommerce\Http\Request\CategoryRequest
      */
     public function category(): CategoryRequest
     {
@@ -86,6 +94,16 @@ class BigCommerce
     public function product(): ProductRequest
     {
         return $this->productRequest;
+    }
+
+    /**
+     * Returns option managing request
+     * 
+     * @return OptionRequest
+     */
+    public function option(): OptionRequest
+    {
+        return $this->optionRequest;
     }
 
     /**
