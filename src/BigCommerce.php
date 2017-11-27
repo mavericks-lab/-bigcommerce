@@ -89,7 +89,7 @@ class BigCommerce
     /**
      * Returns product managing request
      *
-     * @return ProductRequest
+     * @return \Maverickslab\BigCommerce\Http\Request\ProductRequest
      */
     public function product(): ProductRequest
     {
@@ -98,8 +98,8 @@ class BigCommerce
 
     /**
      * Returns option managing request
-     * 
-     * @return OptionRequest
+     *
+     * @return \Maverickslab\BigCommerce\Http\Request\OptionRequest
      */
     public function option(): OptionRequest
     {
@@ -109,7 +109,7 @@ class BigCommerce
     /**
      * Returns order managing request
      *
-     * @return OrderRequest
+     * @return \Maverickslab\BigCommerce\Http\Request\OrderRequest
      */
     public function order(): OrderRequest
     {
@@ -119,7 +119,7 @@ class BigCommerce
     /**
      * Returns customer managing request
      *
-     * @return CustomerRequest
+     * @return \Maverickslab\BigCommerce\Http\Request\CustomerRequest
      */
     public function customer(): CustomerRequest
     {
@@ -129,7 +129,7 @@ class BigCommerce
     /**
      * Returns merchant managing request
      *
-     * @return MerchantRequest
+     * @return \Maverickslab\BigCommerce\Http\Request\MerchantRequest
      */
     public function merchant(): MerchantRequest
     {
