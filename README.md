@@ -5,17 +5,7 @@ This package serves as a request mapper for BigCommerce products, orders, custom
 
 ### Installation
 ```
-{
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://bitbucket.org/maverickslab/bigcommerce"
-        }
-    ],
-    "require": {
-        "mavericks-lab/bigcommerce": "dev-master"
-    }
-}
+    composer require mavericks-lab/bigcommerce
 
 ```
 ### Initialization
